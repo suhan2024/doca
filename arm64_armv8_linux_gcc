@@ -1,0 +1,26 @@
+[binaries]
+c = 'aarch64-linux-gnu-gcc'
+cpp = 'aarch64-linux-gnu-c++'
+ar = 'aarch64-linux-gnu-gcc-ar'
+strip = 'aarch64-linux-gnu-strip'
+c_ld='gold'
+cpp_ld='gold'
+pkgconfig = 'aarch64-linux-gnu-pkg-config'
+pcap-config = ''
+cuda='nvcc'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'aarch64'
+cpu = 'armv8-a'
+endian = 'little'
+
+[built-in options]
+pkg_config_path = ''
+
+[properties]
+# Generate binaries that are portable across all Armv8 machines
+platform = 'generic'
+sys_root = '/root/doca-cross'
+pkg_config_libdir = '/root/doca-cross/usr/lib/pkgconfig:/root/doca-cross/usr/lib/aarch64-linux-gnu/pkgconfig:/root/doca-cross/opt/mellanox/doca/lib/aarch64-linux-gnu/pkgconfig:/root/doca-cross/opt/mellanox/dpdk/lib/aarch64-linux-gnu/pkgconfig:/root/doca-cross/opt/mellanox/grpc/lib/pkgconfig:/usr/local/cuda/bin'
+
